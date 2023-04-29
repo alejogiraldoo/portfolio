@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FONT-AWESOME JS -->
+    <script src="https://kit.fontawesome.com/e4585eb54f.js" crossorigin="anonymous"></script>
+    <!-- EMAIL-JS JS -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    emailjs.init('TrGUvMJSA8WVvtzpL')</script>
+    <!-- SCROLL-REVEAL JS -->
+    <script src="scrollreveal.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <!-- NAVBAR -->
+            <ul class="nav__ul">
+                <li class="nav__ul-li"><a href="#personalInfo">Who am I?</a></li>
+                <li class="nav__ul-li"><a href="#skills">Skills</a></li>
+                <li class="nav__ul-li"><a href="#projects">Projects</a></li>
+                <li class="nav__ul-li"><a href="#tools">Tools</a></li>
+                <li class="nav__ul-li"><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- RESPONSIVE NAVBAR -->
+            <ul class="nav__responsive-ul">
+                <li class="nav__responsive-ul-li"><a href="#personalInfo">Who am I?</a></li>
+                <li class="nav__responsive-ul-li"><a href="#skills">Skills</a></li>
+                <li class="nav__responsive-ul-li"><a href="#projects">Projects</a></li>
+                <li class="nav__responsive-ul-li"><a href="#tools">Tools</a></li>
+                <li class="nav__responsive-ul-li"><a href="#contact">Contact</a></li>
+            </ul>
+            <h3 class="nav__h3">Alejandro Giraldo Ocampo</h3>
+            <div class="nav__icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Portfolio</h1>
+        <!-- PERSONAL DESCRIPTION -->
+        <h2 id="personalInfo">Alejandro Giraldo Ocampo</h2>
+        <article class="article_personalInfo">
+            <section class="article_personalInfo__introduction">
+                <img class="article_personalInfo__introduction-profile" src="img/profile.jpg" alt="">
+                <p class="article_personalInfo__introduction-description">Hi! my name is alejandro and I'm 18 years old. I'm auxiliar technique in Software Development, I have worked in the Web development, Android applications and Python desktop apps. I'm an autodidact developer who has been learning new technologies to create new solutions to the world, and that's the reason I Got in the programming world, perhaps I will find differents problems to solve but it doesn't mean that I'm going to resign</p>
+            </section>
+            <a class="article_personalInfo-a" href="documents/CV.pdf" download="Alejandro Giraldo Ocampo_CV.pdf">Download CV</a>
+        </article>
+        <!-- SKILLS -->
+        <h2 id="skills">Skills</h2>
+        <hr>
+        <section class="section_skills">
+            <ul class="section_skills-ul">
+                <li class="section_skills-ul-li">Systems Analyst</li>
+                <li class="section_skills-ul-li">Documenter</li>
+                <li class="section_skills-ul-li">Teamwork</li>
+                <li class="section_skills-ul-li">Systemic thinking</li>
+                <li class="section_skills-ul-li">Ideas creator</li>
+                <li class="section_skills-ul-li">Problems identifier</li>
+                <li class="section_skills-ul-li">Assertive Communication</li>
+                <li class="section_skills-ul-li">Intermediate English</li>
+            </ul>
+        </section>
+        <hr>
+        <!-- PROJECTS -->
+        <h2 id="projects">Projects</h2>
+        <section class="section_projects">
+            <div class="section_projects__div">
+                <h3 class="section_projects__div-h3">Home Page</h3>
+                <img class="section_projects__div-img" src="img/homePage.png" alt="project 1">
+                <p>This project is a home-page created in base of the freeCodeCamp home-page, it has a basic structure to be add it in project that requier an start presentation with a responsive design based in mobile-first</p>
+                <a class="section_projects__div-page" href="https://alejogiraldoo.github.io/homePage_Scheme/" target="_blank">Page</a>
+                <a class="section_projects__div-repository" href="https://github.com/alejogiraldoo/homePage_Scheme" target="_blank">Repository</a>
+            </div>
+            <div class="section_projects__div">
+                <h3 class="section_projects__div-h3">Gallery</h3>
+                <img class="section_projects__div-img" src="img/gallery.png" alt="project 2">
+                <p>The project is a photography album,which can be used to publish and save a photos collection on the web. it contains an adaptive design with the idea of content-first</p>
+                <a class="section_projects__div-page" href="https://alejogiraldoo.github.io/GalleryPhotos/" target="_blank">Page</a>
+                <a class="section_projects__div-repository" href="https://github.com/alejogiraldoo/GalleryPhotos" target="_blank">Repository</a>
+            </div>
+        </section>
+        <!-- TOOLS -->
+        <h2 id="tools">Tools</h2>
+        <hr>
+        <section class="section_tools">
+            <img class="section_tools__icon" src="img/html_icon.png" alt="html icon">
+            <img class="section_tools__icon" src="img/css_icon.png" alt="css icon">
+            <img class="section_tools__icon" src="img/js_icon.png" alt="js icon">
+            <img class="section_tools__icon" src="img/python_icon.png" alt="python icon">
+            <img class="section_tools__icon" src="img/php_icon.png" alt="php icon">
+            <img class="section_tools__icon" src="img/mysql_icon.png" alt="php icon">
+            <img class="section_tools__icon" src="img/git_icon.png" alt="git icon">
+        </section>
+        <hr>
+        <!-- CONTACT FORM -->
+        <h2 id="contact">Contact with me</h2>
+        <form class="form_contact" id="form">
+            <label for="fullName" class="form_contact__label">Full Name</label>
+            <input type="text" name="fullName" id="fullName" class="form_contact__input" placeholder="Full Name" required>
+            <label for="phone" class="form_contact__label">Phone</label>
+            <input type="number" name="phone" id="phone" class="form_contact__input" placeholder="Phone" required>
+            <label for="email" class="form_contact__label">Email</label>
+            <input type="email" name="email" id="email" class="form_contact__input" placeholder="Email" required>
+            <label for="message" class="form_contact__label">Message</label>
+            <textarea type="text" name="message" id="message" class="form_contact__textarea" placeholder="Message" required></textarea>
+            <input type="submit" class="form_contact__input--submit" id="button" value="Send Email">
+        </form>
+        <!-- CONTACT LINKS -->
+        <address class="address_contactLinks">
+            <a href="https://github.com/alejogiraldoo" target="_blank"><img src="img/github_icon.png" alt="github icon"></a>
+            <a href="https://linkedin.com/in/alejandro-giraldo-ocampo-30a825233" target="_blank"><img src="img/linkedin_icon.png" alt="linkedin icon"></a>
+        </address>
+    </main>
+    <footer>
+        <small>Developed and designed by Alejandro Giraldo Ocampo. ©2023. All rights reserved.</small>
+    </footer>
+    <!-- CUSTOM JS -->
+    <script src="main.js"></script>
+</body>
+</html>
