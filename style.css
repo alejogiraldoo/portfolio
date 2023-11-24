@@ -1,0 +1,351 @@
+/* Style sheet */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@300;700&display=swap');
+
+/* VARIABLES */
+:root[data-theme="light"]{
+    --body-bg-color: #fff;
+    --font-color: #000;
+    --elements-background-color: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    --elements-border-color: #66a6ff;
+    --show-sun: visible;
+    --show-moon: hidden;
+}
+
+:root[data-theme="dark"]{
+    --body-bg-color: #000;
+    --font-color: #f2f2f2;
+    --elements-background-color: linear-gradient(120deg, #00eeff 0%, #2a80f7 100%);
+    --elements-border-color: #2882f7;
+    --show-sun: hidden;
+    --show-moon: visible;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--font-color);
+}
+
+body{
+    background-color: var(--body-bg-color);
+}
+
+/* Header */
+/* Mobile Design */
+.menu{
+    position: sticky;
+    top: .1px;
+    z-index: 100;
+}
+
+.menu__nav{
+    height: 70px;
+    background-image: var(--elements-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.menu__author-name{
+    margin: 10px 20px;
+    font-size: 18px;
+}
+
+.menu__icon{
+    margin: 10px 20px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.menu__links{
+    position: absolute;
+    list-style: none;
+    text-align: left;
+    font-weight: bold;
+    left: -100%; 
+    top: 0;
+    height: 100vh;
+    padding: 10px 50px 0;
+    background-image: var(--elements-background-color);
+    transition: 1s left;
+}
+
+.menu__links--show{
+    left: 0;
+}
+
+.menu__link{
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu__link::before{
+    content: "☆ ";
+}
+
+.menu__link:hover{
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--font-color);
+    transition: .2s padding, .2s border;
+}
+/* Desktop Design */
+.menu__links--desktop{
+    display: none;
+    font-weight: bold;
+}
+
+.menu__link--desktop{
+    margin: 0 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu__link--desktop:hover{
+    border-bottom: 1px solid var(--font-color);
+    padding-bottom: 5px;
+    transition: .2s padding, .2s border;
+}
+
+/* DARK MODE OPTON */
+.menu__theme-mode{
+    width: 35px;
+    position: absolute;
+    right: 17px;
+    top: 80px;
+}
+
+.menu__theme-mode:hover{
+    cursor: pointer;
+}
+
+.menu__theme-mode--light{
+    visibility: var(--show-sun);
+}
+
+.menu__theme-mode--dark{
+    visibility: var(--show-moon);
+}
+
+/* Page Contenet */
+/* Introduction */
+.introduction{
+    height: max-content;
+    background-image: url('img/wave.svg');
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.introduction__picture{
+    margin: 30px 10px;
+}
+
+.introduction__img{
+    width: 100%;
+    max-width: 330px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+    color: var(--elements-border-color);
+}
+
+.introduction__text{
+    max-width: 600px;
+    padding: 0 30px 20px;
+    text-align: center;
+}
+
+.introduction__title, .skills__title, .projects__title, .tools__title, .contact__title{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.introduction__paragraph, .project__paragraph{
+    text-align: left;
+}
+
+.introduction__download, .project__link{
+    display: inline-block;
+    margin: 20px 0;
+    background-image: var(--elements-background-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.introduction__download:hover{
+    opacity: .8;
+    padding: 12px 50px;
+}
+
+/* Skills */
+.skills, .projects{
+    padding: 70px 0;
+}
+
+.skills__list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.skills__item{
+    margin: 15px;
+}
+
+.skills__item:hover{
+    cursor: pointer;
+}
+
+.skills__item::before{
+    content: "☆ ";
+}
+
+.skills__item--pointed::before{
+    content: "★ ";
+}
+
+/* Projects */
+.project__title{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.projects__list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects__text{
+    padding: 0 30px 20px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project__picture{
+    text-align: center;
+}
+
+.project__img{
+    width: 100%;
+    max-width: 400px;
+    max-height: 180px;
+    border-radius: 10px;
+    transition: 1s opacity;
+}
+
+.project__img:hover{
+    opacity: .6;
+    cursor: pointer;
+}
+
+.project__paragraph{
+    margin: 10px 0 0;
+}
+
+.project__languages{
+    height: 24px;
+    margin-top: 10px;
+}
+
+.project__language{
+    width: 30px;
+    height: 30px;
+}
+
+.project__link{
+    box-sizing: content-box;
+    margin: 12px auto;
+    width: 200px;
+    text-align: center;
+}
+
+.project__link:hover{
+    opacity: .8;
+    padding: 12px 60px;
+}
+
+/* Tools */
+.tools, .contact{
+    padding: 10px 0 30px;
+    text-align: center;
+}
+
+.tools__icon{
+    width: 60px;
+    margin: 5px;
+    transition: .7s padding;
+}
+
+.tools__icon:hover{
+    cursor: pointer;
+    padding: 10px;
+    opacity: .6;
+}
+
+/* Contact */
+.contact{
+    text-align: center;
+}
+
+.contact__link{
+    text-decoration: none;
+}
+
+.contact__icon{
+    margin: 0 10px;
+    width: 40px;
+    height: 50px;
+    transition: .7s padding-bottom;
+    text-decoration: none;
+}
+
+.contact__icon:hover{
+    padding-bottom: 15px;
+}
+
+/* Footer */
+.footer{
+    background-image: var(--elements-background-color);
+    text-align: center;
+    padding: 30px;
+}
+
+.footer__text{
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1100px){
+    /* Header */
+    .menu__nav{
+        padding: 0 100px;
+    }
+
+    .menu__links, .menu__icon{
+        display: none;
+    }
+
+    .menu__links--desktop{
+        display: flex;
+        list-style: none;
+        text-align: left;
+        align-items: center;
+        height: 60px;
+    }
+}

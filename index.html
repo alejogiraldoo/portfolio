@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro Giraldo Ocampo | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="img/page-logo.svg">
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="menu">
+        <nav class="menu__nav">
+            <!-- MOBILE DESIGN -->
+            <h1 class="menu__author-name">Alejandro Giraldo Ocampo</h1>
+            <img src="img/bar.svg" class="menu__icon" id="menuIcon">
+            <ul class="menu__links" id="navigation">
+                <li><a href="#intro" class="menu__link">Who Am I?</a></li>
+                <li><a href="#mySkills" class="menu__link">Skills</a></li>
+                <li><a href="#myProjects" class="menu__link">Projects</a></li>
+                <li><a href="#myTools" class="menu__link">Tools</a></li>
+                <li><a href="#myContact" class="menu__link">Contact Links</a></li>
+            </ul>
+            <!-- DESKTOP DESIGN -->
+            <ul class="menu__links--desktop">
+                <li><a href="#intro" class="menu__link--desktop">Who Am I?</a></li>
+                <li><a href="#mySkills" class="menu__link--desktop">Skills</a></li>
+                <li><a href="#myProjects" class="menu__link--desktop">Projects</a></li>
+                <li><a href="#myTools" class="menu__link--desktop">Tools</a></li>
+                <li><a href="#myContact" class="menu__link--desktop">Contact Links</a></li>
+            </ul>
+        </nav>
+        <!-- DARK-MODE OPTION -->
+        <img src="img/sun.svg" class="menu__theme-mode menu__theme-mode--light">
+        <img src="img/moon.svg" class="menu__theme-mode menu__theme-mode--dark">
+    </header>
+    <!-- Page Content -->
+    <!-- INTRODUCTION -->
+    <section class="introduction" id="intro">
+        <figure class="introduction__picture">
+            <img src="img/profile.jpg" alt="my picture" class="introduction__img">
+        </figure>
+        <div class="introduction__text">
+            <h2 class="introduction__title">Who Am I?</h2>
+            <p class="introduction__paragraph">
+                Hi! My name is Alejandro, and I'm <span id="myAge"></span> years old. I'm an auxiliary technician in Software Development. I have experience in web development, Android applications, and Python desktop apps. I am a self-taught developer who constantly learns new technologies to create innovative solutions for the world. This drive is what led me into the programming world. While I may encounter different problems to solve, it doesn't mean I'll give up.
+            </p>
+            <a href="documents/Resume__Alejandro Giraldo Ocampo.pdf" target="_blank" class="introduction__download">Download CV</a>
+        </div>
+    </section>
+    <!-- MY SKILLS -->
+    <section class="skills" id="mySkills">
+        <h2 class="skills__title">Skills</h2>
+        <ul class="skills__list" id="skills_List"></ul>
+    </section>
+    <hr>
+    <!-- MY PROJECTS -->
+    <section class="projects" id="myProjects">
+        <h2 class="projects__title">My Projects</h2>
+        <div class="projects__list" id="projects_list"></div>
+    </section>
+    <hr>
+    <!-- MY TOOLS -->
+    <section class="tools" id="myTools">
+        <h2 class="tools__title">My tools</h2>
+        <div class="tools__list" id="tools_List"></div>
+    </section>
+    <!-- CONTACT LINKS -->
+    <section class="contact" id="myContact">
+        <h2 class="contact__title">Contact with Me</h2>
+        <div class="contact__links" id="contact_links"></div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <small class="footer__text">Developed and designed by Alejandro Giraldo Ocampo. ©2023. All rights reserved.</small>
+    </footer>
+</body>
+<!-- JS document -->
+<script type="module" src="App.js"></script>
+</html>
