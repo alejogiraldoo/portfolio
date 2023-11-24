@@ -56,12 +56,13 @@ body{
 
 .menu__icon{
     margin: 10px 20px;
-    width: 25px;
+    height: 25px;
     cursor: pointer;
 }
 
 .menu__links{
     position: absolute;
+    z-index: 200;
     list-style: none;
     text-align: left;
     font-weight: bold;
@@ -116,7 +117,7 @@ body{
 .menu__theme-mode{
     width: 35px;
     position: absolute;
-    right: 17px;
+    right: 15px;
     top: 80px;
 }
 
@@ -147,7 +148,7 @@ body{
 }
 
 .introduction__picture{
-    margin: 30px 10px;
+    margin: 30px 10px 15px;
 }
 
 .introduction__img{
@@ -304,20 +305,25 @@ body{
     text-align: center;
 }
 
+.contact__links{
+    height: 50px;
+}
+
 .contact__link{
+    display: inline-block;
+    height: inherit;
+    margin: 0 10px;
     text-decoration: none;
 }
 
 .contact__icon{
-    margin: 0 10px;
     width: 40px;
-    height: 50px;
-    transition: .7s padding-bottom;
-    text-decoration: none;
+    height: 100%;
+    transition: 1s padding-bottom;
 }
 
 .contact__icon:hover{
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 /* Footer */
@@ -347,5 +353,74 @@ body{
         text-align: left;
         align-items: center;
         height: 60px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    *, .menu__author-name{
+        font-size: 12px;
+    }
+
+    .menu__nav{
+        height: 50px;
+    }
+
+    .menu__icon{
+        margin: 15px;
+        max-width: 18px;
+    }
+
+    .menu__links{
+        padding: 10px 30px 0;
+    }
+
+    .menu__theme-mode{
+        width: 25px;
+        right: 12px;
+        top: 60px;
+    }
+
+    .introduction__text, .projects__text{
+        padding: 0 20px 20px;
+    }
+
+    .introduction__title, .skills__title, .projects__title, .tools__title, .contact__title{
+        font-size: 20px;
+    }
+
+    .introduction__img{
+        max-width: 200px;
+    }
+
+    .skills, .projects{
+        padding: 50px 0;
+    }
+
+    .project__link{
+        width: max-content;
+    }
+
+    .skills__item{
+        margin: 10px;
+    }
+
+    .tools__icon{
+        width: 45px;
+    }
+
+    .contact__links{
+        height: 40px;
+    }
+
+    .contact__icon{
+        width: 30px;
+    }
+
+    .contact__icon:hover{
+        padding-bottom: 15px;
+    }
+
+    .footer{
+        padding: 20px 10px;
     }
 }
